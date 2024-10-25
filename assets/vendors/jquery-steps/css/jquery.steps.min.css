@@ -1,0 +1,1 @@
+.steps-pills .nav-link{cursor:pointer}.steps-pills .nav-link.error{background-color:#ff3a3a;color:#fff}.steps-pills .nav-link.done{background-color:#00963e;color:#fff}.steps-pills .nav-link:not(.done){pointer-events:none;cursor:auto}input.error{box-shadow:0 0 0 .1rem rgba(255,0,0,.1)}label.error{margin-top:.5rem;color:red}

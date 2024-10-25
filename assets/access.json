@@ -1,0 +1,22 @@
+{
+    "paths" : {
+        "emp_mgmt_pages":{
+            "paths":["/employees/*"]
+        },
+        "role_mgmt_pages":{
+            "paths":["/roles/*"]
+        },
+        "payroll_mgmt_pages":{
+            "paths":["/payroll/*"]
+        },
+        "leaves_mgmt_pages":{
+            "paths":["/leaves/*"]
+        },
+        "root":{
+
+        },
+        "root":{
+
+        }
+    }
+}
