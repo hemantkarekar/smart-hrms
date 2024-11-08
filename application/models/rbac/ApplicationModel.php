@@ -8,7 +8,7 @@ class ApplicationModel extends CI_Model
     {
         parent::__construct();
         $this->table['users'] = 'app_application_users';
-        $this->table['employees'] = 'app_company_employee';
+        $this->table['employees'] = 'app_company_employees';
     }
     public function get($where = null, $columns = null){
         if (!is_null($where)) {

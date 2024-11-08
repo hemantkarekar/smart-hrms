@@ -8,7 +8,7 @@ class EmployeeModel extends CI_Model
     {
         parent::__construct();
         $this->table['users'] = 'app_application_users';
-        $this->table['employees'] = 'app_company_employee';
+        $this->table['employees'] = 'app_company_employees';
     }
 
     public function get($where = null, $what = null)
@@ -19,9 +19,20 @@ class EmployeeModel extends CI_Model
         if (!is_null($what)) {
             $this->db->select($what);
         }
-        $result = $this->db->get($this->table['users'])->result_array()[0];
-        $this->result = $result;
-        return $result;
+        $result = $this->db->get($this->table['employees'])->result_array();
+        return json_encode($result);
+    }
+    public function get_sorted($where = null, $what = null, $sort = ['id', 'DESC'])
+    {
+        if (!is_null($where)) {
+            $this->db->where($where);
+        }
+        if (!is_null($what)) {
+            $this->db->select($what);
+        }
+        $this->db->order_by($sort[0], $sort[1]);
+        $result = $this->db->get($this->table['employees'])->result_array();
+        return json_encode($result);
     }
 
     public function authorize(array $request)
