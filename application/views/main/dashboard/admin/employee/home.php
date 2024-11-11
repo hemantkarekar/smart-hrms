@@ -178,9 +178,9 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>01/01/2022</td>
-                                        <td>26/04/2022</td>
-                                        <td><span class="badge bg-danger">Released</span></td>
+                                        <td><?= $employee['joining_date'] ?></td>
+                                        <td><?= $employee['joining_date'] ?></td>
+                                        <td><span class="badge bg-success">Active</span></td>
                                         <td>Leonardo Payne</td>
                                     </tr>
                                 <?php endforeach ?>

@@ -48,7 +48,7 @@
 								<a href="<?= base_url('employees') ?>" class="nav-link <?= link_is_active("employees") ?>">All Employees</a>
 							</li>
 							<li class="nav-item">
-								<a href="<?= base_url('employees/new') ?>" class="nav-link <?= link_is_active("employees/new") ?>">Add New Employee</a>
+								<a href="<?= base_url('employee/new') ?>" class="nav-link <?= link_is_active("employee/new") ?>">Add New Employee</a>
 							</li>
 						</ul>
 					</div>
