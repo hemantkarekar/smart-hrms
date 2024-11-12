@@ -74,7 +74,7 @@ $route['time-sheet'] ='payroll/AttendanceController/all_timesheet';
 $route['overtime'] ='payroll/AttendanceController/all_overtime';
 
 $route['employees'] ='employee/EmployeesController/all_employees';
-$route['employees/new'] ='employee/EmployeesController/new_single_employee';
+$route['employee/new'] ='employee/EmployeesController/new_single_employee';
 
 $route['leaves'] ='payroll/LeavesController/self_leaves';
 $route['leaves/all'] ='payroll/LeavesController/all_leaves';

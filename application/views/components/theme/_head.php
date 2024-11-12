@@ -72,7 +72,7 @@
 <link rel="stylesheet" href="<?= base_url("assets") ?>/css/demo1/style.css">
 <!-- End layout styles -->
 
-<link rel="shortcut icon" href="<?= base_url("assets") ?>/images/favicon.png" />
+<link rel="shortcut icon" href="<?= base_url("assets") ?>/images/favicon.ico" />
 
 <link rel="stylesheet" href="<?= base_url("assets") ?>/css/custom.min.css">
 
