@@ -81,6 +81,8 @@ $route['leaves/all'] ='payroll/LeavesController/all_leaves';
 $route['leaves/pending'] ='payroll/LeavesController/leave_requests';
 
 $route['payslips'] = 'payroll/PayrollController/self_payslips';
+$route['all-payslips'] = 'payroll/PayrollController/all_payslips';
+$route['all-payslips/new'] = 'payroll/PayrollController/new_payslip';
 $route['payslip/(:any)'] = 'payroll/PayrollController/self_payslip_single/$1';
 $route['payroll'] = 'payroll/PayrollController/all_payroll';
 $route['payroll/new'] = 'payroll/PayrollController/new_payroll';

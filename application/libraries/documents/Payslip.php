@@ -2,24 +2,34 @@
 
 use Fpdf\Fpdf;
 
-require_once "./vendor/autoload.php";
+require_once APPPATH . "vendor/autoload.php";
 
 class SocioPDF extends Fpdf
 {
+    protected $company;
+
+    public function __construct($orientation, $unit, $size)
+    {
+        parent::__construct($orientation, $unit, $size);
+        $this->company['name'] = 'Vahi Mediatech Pvt. Ltd.';
+        $this->company['logo'] = 
+        'assets/images/logos/apogee.jpg';
+        $this->company['address'] = 'Company Address, City, State, XXX XXX';
+    }
     function SetCellMargin($margin) { $this->cMargin = $margin; }
     // Page header
     function Header()
     {
         // Logo
-        $this->Image(FCPATH . 'assets/images/logos/vahi.png', 8, 6, 60);
+        $this->Image(FCPATH . $this->company['logo'], 8, 6, 60);
         // Line break
         $this->Ln(2);
         // Arial bold 15
         $this->SetFont('Arial', 'B', 24);
         // Title
-        $this->Cell(0, 11, 'Vahi Mediatech Pvt. Ltd.', 0, 1, 'C');
+        $this->Cell(0, 11, $this->company['name'], 0, 1, 'C');
         $this->SetFont('Arial', '', 11);
-        $this->Cell(0, 9, 'Company Address, City, State, XXX XXX', 0, 1, 'C');
+        $this->Cell(0, 9, $this->company['address'], 0, 1, 'C');
         $this->Line(8, 35, $this->w - 8, 35);
         // Line break
         $this->Ln(6);
@@ -42,7 +52,7 @@ class Payslip
 {
     public $pdf;
 
-    public function init($orientation = 'P', $unit = 'mm', $size = 'A4')
+    public function init($orientation = 'L', $unit = 'mm', $size = 'A4')
     {
         $this->pdf = new SocioPDF($orientation, $unit, $size);
         return $this;
