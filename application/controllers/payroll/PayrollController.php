@@ -24,8 +24,13 @@ class PayrollController extends RBACController
 
     public function new_payslip() {
         $employees = json_decode($this->EmployeeModel->get_sorted(['status' => 1], null), true);
+        $month = [
+            'F' => date('F'),
+            'm' => date('m'),
+        ];
         if ($this->rbac_access) {
             $this->data['employees'] = $employees;
+            $this->data['month'] = $month;
             $this->load->admin_dashboard('payroll/payslips/new', $this->data);
         } else {
             $data['error_code'] = 403;

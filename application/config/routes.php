@@ -59,6 +59,7 @@ $route['api/onboarding/proceed'] = 'api/OnboardingAPI/register';
 
 $route['api/salary-slip/import'] = 'api/SalarySlipController/import_csv';
 $route['api/salary-slip/generate'] = 'api/SalarySlipController/bulk_generate';
+$route['api/v2/salary-slip/new'] = 'api/SalarySlipController/new_generate';
 $route['api/salary-slip/bulk-generate'] = 'api/SalarySlipController/make_pdf';
 
 $route[''] = 'DashboardController/index';

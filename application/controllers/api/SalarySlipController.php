@@ -60,6 +60,10 @@ class SalarySlipController extends APIController
 		}
 	}
 
+	public function new_generate() {
+		print_r($this->input->post());
+	}
+
 	public function bulk_generate()
 	{
 		$this->load->library('documents/Payslip');
