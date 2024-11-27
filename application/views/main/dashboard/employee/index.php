@@ -1,14 +1,5 @@
 <div class="page-content">
-  <div class="">
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-      <strong>Holy guacamole!</strong> Your Leave Request for <strong>24th June 2024</strong> has been Approved!!!
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-      <strong>Holy guacamole!</strong> Your Leave Request for <strong>24th June 2024</strong> has been Approved!!!
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-  </div>
+ 
 
   <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
     <div>

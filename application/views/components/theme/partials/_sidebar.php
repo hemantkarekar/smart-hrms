@@ -110,7 +110,7 @@
 								<a href="#" class="nav-link">Run New Payroll</a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link <?= link_is_active("payslips") ?>">Payslips</a>
+								<a href="<?= base_url('all-payslips') ?>" class="nav-link <?= link_is_active("all-payslips") ?>">Payslips</a>
 							</li>
 						</ul>
 					</div>
