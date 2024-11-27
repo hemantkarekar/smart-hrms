@@ -38,8 +38,8 @@ class UserModel extends CI_Model
     public function get_role()
     {
         $this->role = 'hr';
-        $this->role = 'admin';
         $this->role = 'employee';
+        $this->role = 'admin';
         $this->user_data['user']['role'] = $this->role;
         $this->session->set_userdata('user', $this->user_data['user']);
         return $this->role;

@@ -2,7 +2,6 @@
 require_once APPPATH . 'controllers/RBACController.php';
 class AttendanceController extends RBACController
 {
-    private $rbac_access;
     public function __construct()
     {
         parent::__construct();
