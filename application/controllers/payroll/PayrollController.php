@@ -23,7 +23,7 @@ class PayrollController extends RBACController
     }
 
     public function new_payslip() {
-        $employees = json_decode($this->EmployeeModel->get_sorted(['status' => 1], null), true);
+        $employees = json_decode($this->EmployeeModel->get_sorted(['status' => 1], ['id', 'first_name', 'last_name']), true);
         $month = [
             'F' => date('F'),
             'm' => date('m'),

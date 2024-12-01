@@ -2,7 +2,7 @@
 
 class APIController extends CI_Controller
 {
-    public $output;
+    public $request, $response, $result;
 	public function __construct()
 	{
 		parent::__construct();
