@@ -1,4 +1,5 @@
 <?php
+
 /**
  * UserModel
  * 
@@ -14,13 +15,19 @@ class UserModel extends CI_Model
     {
         parent::__construct();
     }
-    
-    public function get($id)
+
+    public function get($select = null, $where = null)
     {
-        $result = $this->db->query("SELECT * FROM `panel_users` WHERE `id` = '" . $id . "'")->result()[0];
-        return $result;
+        $table = 'panel_users';
+        if (!is_null($select)) {
+            $this->db->select($select);
+        }
+        if (!is_null($where)) {
+            $this->db->where($where);
+        }
+        return json_encode($this->db->get($table)->result_array());
     }
-        
+
     /**
      * authorize
      * 

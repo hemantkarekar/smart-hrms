@@ -22,8 +22,12 @@ class EmployeesController extends RBACController
     }
     public function new_single_employee()
     {
+        $this->load->model('data/DepartmentModel');
+        $this->load->model('data/DesignationModel');
+        $this->data['page']['designations'] = json_decode($this->DesignationModel->get(), true);
+        $this->data['page']['departments'] = json_decode($this->DepartmentModel->get(), true);
         if ($this->rbac_access) {
-            $this->load->admin_dashboard('employee/new_single');
+            $this->load->admin_dashboard('employee/new_single', $this->data);
         } else {
             $data['error_code'] = 403;
             $this->load->error_view('forbidden', $data);

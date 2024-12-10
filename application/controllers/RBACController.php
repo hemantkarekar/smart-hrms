@@ -7,6 +7,7 @@ class RBACController extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('UserModel');
+        // $this->load->model('rbac/OrganizationModel');
 		$this->error = [];
 		if (in_array($this->UserModel->get_role(), ['admin', 'hr'])) {
             $this->rbac_access = true;
